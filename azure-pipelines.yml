@@ -20,7 +20,6 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'saqservconnect'
-
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'

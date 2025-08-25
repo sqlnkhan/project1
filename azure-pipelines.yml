@@ -15,4 +15,15 @@ steps:
     backendAzureRmStorageAccountName: 'saqlainstrgacc'
     backendAzureRmContainerName: 'saqlaintfstate'
     backendAzureRmKey: 'saqlain.terraform.tfstate'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'saqservconnect'
+
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    environmentServiceNameAzureRM: 'saqservconnect'
 

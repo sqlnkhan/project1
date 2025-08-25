@@ -11,8 +11,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendAzureRmUseEntraIdForAuthentication: false
-    backendServiceArm: 'saqlainserviceconnected'
+    backendServiceArm: 'saqservconnect'
     backendAzureRmStorageAccountName: 'saqlainstrgacc'
     backendAzureRmContainerName: 'saqlaintfstate'
     backendAzureRmKey: 'saqlain.terraform.tfstate'

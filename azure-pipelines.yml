@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool: Saqlain-Swimmers
+
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'bf61eae9-2d0e-4517-93a7-006c0d7b8fea'
+    backendAzureRmStorageAccountName: 'saqlainstrgacc'
+    backendAzureRmContainerName: 'saqlaintfstate'
+    backendAzureRmKey: 'saqlain.terraform.tfstate'
